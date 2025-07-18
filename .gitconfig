@@ -1,0 +1,30 @@
+[user]
+	name = USUARIO
+	email = EMAIL
+[core]
+	editor = code --wait
+	autocrlf = true
+[merge]
+	tool = kdiff3
+[merge "tool"]
+	keepBackup = false
+[alias]
+	tree = log --graph --decorate --all --oneline
+	s = status -sb
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lgo = log --oneline --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+	a = add .
+	comane = commit --amend --no-edit
+	cm = commit -m
+	p = push
+	gl = config --global -l
+	r = restore .
+	rv = remote -v
+	ge = config --global -e
+	prevBranch = checkout -
+[init]
+	defaultBranch = main
+
+[pull]
+	ff = only
+	rebase = true
